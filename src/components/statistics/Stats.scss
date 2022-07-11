@@ -1,0 +1,142 @@
+.stat-wrapper {
+  margin-top: 2.9375rem;
+  display: flex;
+  flex-direction: column;
+
+  &__single-stat-wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  &__left-container {
+    display: flex;
+  }
+  &__right_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__right-container-title {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.75rem;
+    margin-bottom: 0.6rem;
+  }
+
+  &__right-container-comment {
+    color: #a0b0b9;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1rem;
+  }
+  &__right-container-blue-text {
+    color: #2196f3;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1.0625;
+  }
+
+  &__image-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 4rem;
+  }
+  &__image {
+    max-width: 3rem;
+    height: 4.875rem;
+    margin-left: 25%;
+  }
+  &__vector {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+  &__searches {
+    display: grid;
+    grid-template-columns: 5rem 6rem;
+    width: 75%;
+  }
+
+  &__searches-items {
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  &__searches-items-right {
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  &__search-item {
+    color: #4a4a4a;
+    margin-right: 0.5rem;
+  }
+  &__searches-light {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  &__searches-lighter {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #a0b0b9;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.3125rem;
+    height: 0.875rem;
+    background-color: #8bc34a;
+    color: white;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 0.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  &__yesterday {
+    color: #4a4a4a;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  &___last-friday {
+    color: #a0b0b9;
+    font-size: 0.75;
+    line-height: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+  }
+  .margin-t-1 {
+    margin-top: 2rem;
+  }
+
+  .bg-red {
+    background-color: #ff6a67;
+  }
+  .text-red {
+    color: #ff6a67;
+  }
+  .divider {
+    margin-left: 4.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 33.8125rem;
+    background-color: #eff1f4;
+    height: 1px;
+  }
+}
