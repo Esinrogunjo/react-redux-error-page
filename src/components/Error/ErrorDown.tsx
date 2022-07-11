@@ -1,31 +1,16 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "../../store";
 import YellowSquare from "../atoms/YellowSquare";
-
-const ErrorDown = ({ color }: { color: string }) => {
-  const data = useSelector((state: RootState) => state.errorReducer.day);
-  console.log(data);
-
-  if (data.length < 0) {
-    return (
-      <div className="single-error-down">
-        <div className="single-error-down__error-container">
-          <YellowSquare fill={`${color}`} className="single-error-down__dot" />
-          <span className="single-error-down__title">Error 500: 1 256</span>
-        </div>
-      </div>
-    );
-  }
-  //console.log(data);
-  return data.map((item, i) => {
+import { random_hex_color_code } from "../helper";
+const ErrorDown = ({ item, color }: any) => {
+  return (
     <div className="single-error-down">
       <div className="single-error-down__error-container">
         <YellowSquare fill={`${color}`} className="single-error-down__dot" />
-        <span className="single-error-down__title">Error :</span>
+        <span className="single-error-down__title">
+          {item.code ? "Error " : "Other "} {item.code}:{item.count}
+        </span>
       </div>
-    </div>;
-  });
+    </div>
+  );
 };
 
 export default ErrorDown;

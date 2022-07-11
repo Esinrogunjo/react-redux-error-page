@@ -3,7 +3,7 @@ import Arrow from "../../atoms/Arrow";
 
 import Thumb from "../../atoms/Thumb";
 
-const Clicks = () => {
+const Clicks = ({ data, daySelected }: any) => {
   return (
     <div className="stat-wrapper__single-stat-wrapper">
       <div className="stat-wrapper__left-container">
@@ -15,16 +15,24 @@ const Clicks = () => {
           <div className="stat-wrapper__searches-items">
             <div className="stat-wrapper__search-item text-red">Clicks</div>
             <div className="stat-wrapper__search-item stat-wrapper__searches-light">
-              29 380
+              {data.clicks1}
             </div>
             <div className="stat-wrapper__search-item stat-wrapper__searches-lighter">
-              27 985
+              {data.clicks2}
             </div>
           </div>
 
           <div className="stat-wrapper__searches-items-right">
             <div className="stat-wrapper__btn bg-red">-13%</div>
-            <div className="stat-wrapper__yesterday">Yesterday</div>
+            <div className="stat-wrapper__yesterday">
+              {daySelected == "errors_last_3days"
+                ? "Last 3 days"
+                : daySelected == "errors_last_hour"
+                ? "Last hour"
+                : daySelected == "errors_today"
+                ? "Today"
+                : "Yesterday"}
+            </div>
             <div className="stat-wrapper___last-friday">Last friday</div>
           </div>
         </div>
@@ -32,7 +40,11 @@ const Clicks = () => {
 
       <div className="stat-wrapper__right_container">
         <span className="stat-wrapper__right-container-title text-red">
-          CTR: 0,04%{" "}
+          CTR:
+          {data.ctr1 && data.ctr2
+            ? ((data.ctr1 + data.ctr2) / 2).toFixed(3)
+            : " 0,12"}{" "}
+          %
         </span>
 
         <span className="stat-wrapper__right-container-comment">
